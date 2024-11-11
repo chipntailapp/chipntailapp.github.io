@@ -29,7 +29,7 @@
             height: auto;
             display: block; /* Ensures no extra space below the image */
         }
-        .link-container {
+		.link-container {
             position: absolute;
             top: 87%; /* Adjust this value to move the buttons up/down */
             left: 50%;
@@ -50,7 +50,29 @@
             text-align: center;
 			border: 2px solid #f2f2f2;
         }
-        
+          /* Mobile optimization */
+        @media screen and (max-width: 768px) {
+            .link-container {
+                top: 70%; /* Adjust the button position for smaller screens */
+            }
+            .link-container a {
+                padding: 15px 30px; /* Reduce padding on smaller screens */
+                font-size: 16px; /* Smaller text for mobile */
+                width: 200px; /* Smaller button width */
+            }
+        }
+
+        /* Extra small mobile optimization */
+        @media screen and (max-width: 480px) {
+            .link-container {
+                top: 75%; /* Adjust for even smaller screens */
+            }
+            .link-container a {
+                padding: 12px 25px; /* Further reduce padding */
+                font-size: 14px; /* Even smaller text for mobile */
+                width: 180px; /* Further reduce button width */
+            }
+        }
     </style>
 </head>
 <body>
