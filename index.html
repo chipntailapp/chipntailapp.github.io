@@ -10,7 +10,6 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -19,62 +18,51 @@
             color: #f2f2f2;
             text-align: center;
         }
-        img {
-            max-width: 90%;
+        .image-container {
+            position: relative;
+            width: 100vw; /* Full viewport width */
+            max-width: 100%; /* Prevents the image from going beyond the viewport */
             height: auto;
-            margin-bottom: 20px;
+        }
+        .image-container img {
+            width: 100%; /* Full width of the container */
+            height: auto;
+            display: block; /* Ensures no extra space below the image */
         }
         .link-container {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
+            position: absolute;
+            top: 87%; /* Adjust this value to move the buttons up/down */
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center the buttons horizontally */
+            display: block;
         }
         .link-container a {
-            display: inline-block;
+            display: block;
+            margin-bottom: 55px; /* Space between buttons */
             padding: 10px 20px;
             border-radius: 8px;
-            background-color: #fff;
-            color: #000;
+            background-color: transparent;
+            color: #f2f2f2;
             text-decoration: none;
             font-weight: bold;
             transition: background-color 0.3s, color 0.3s;
+            width: 200px; /* Set button width as needed */
+            text-align: center;
+			border: no;
         }
-        .link-container a:hover {
-            background-color: #d1b3ff;
-            color: #2e1a47;
-        }
-        footer {
-            margin-top: 40px;
-            font-size: 0.9em;
-            color: #bdbdbd;
-        }
-        footer a {
-            color: #bdbdbd;
-            text-decoration: underline;
-        }
+        
     </style>
 </head>
 <body>
-    <!-- Image of the coming soon page -->
-    <div>
+    <!-- Image container with buttons positioned on top -->
+    <div class="image-container">
         <img src="Coming Soon Website Coming Soon Page in Black White Dark Futuristic Style (1).jpg" alt="Coming Soon Chip & Tail">
         
-        <!-- Placeholder links for the App Store and Google Play -->
+        <!-- Buttons positioned on top of the image buttons -->
         <div class="link-container">
-            <a href="#" target="_blank">App Store</a>
-            <a href="#" target="_blank">Google Play</a>
+            <a href="https://apps.apple.com/in/app/chip-tail/id6447422562" target="_blank"></a>
+            <a href="https://play.google.com/store/apps/datasafety?id=com.chipntail.retail&hl=en_US" target="_blank"></a>
         </div>
     </div>
-    
-    <!-- Additional description for visitors -->
-    <section>
-        <p>We are excited to bring you the next generation of pet safety with our upcoming app, launching Autumn 2024. Stay connected for more updates and be among the first to experience the future of pet care technology.</p>
-    </section>
-    
-    <!-- Footer section -->
-    <footer>
-        <p>&copy; 2024 Chip & Tail. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-    </footer>
 </body>
 </html>
